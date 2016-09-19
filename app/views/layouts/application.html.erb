@@ -13,13 +13,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<!-- renders all flash messages that are defined regardless of name or controller they come from. These lines will display the flash[:notice]-->
-<% flash.each do |key, message| %>
-<div><%= message %></div>
-<% end %>
-
-<%= yield %>
+  <div class="container">
+  <!-- renders all flash messages that are defined regardless of name or controller they come from. These lines will display the flash[:notice]-->
+    <% flash.each do |key, message| %>
+    <div><%= message %></div>
+    <% end %>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
