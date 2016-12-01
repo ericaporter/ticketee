@@ -4,7 +4,7 @@ RSpec.feature "Users can create new tickets" do
   let(:user) { FactoryGirl.create(:user) }
 
   before do
-    login_as(user)
+    login_as(FactoryGirl.create)(:user, :admin)
     project = FactoryGirl.create(:project, name: "Internet Explorer")
 
     visit project_path(project)
