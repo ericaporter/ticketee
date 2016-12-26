@@ -1,0 +1,8 @@
+<!-- Rails interprets the symbol 'projects' literally -->
+<%= simple_form_for([:admin, project]) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.button :submit, class: "btn-primary" %>
+  <% end %>
+
+<!-- using simple form means you no longer need p tags or labels  -->
